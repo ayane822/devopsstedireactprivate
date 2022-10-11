@@ -1,4 +1,5 @@
-const fetch =require('node-fetch');
+import fetch from 'node-fetch';
+import assert from "assert";
 
 const login = async ()=>{
     const tokenResponse = await fetch('https://dev.stedi.me/login',{
@@ -8,6 +9,7 @@ const login = async ()=>{
     password:"P@ssw0rd"
   })
 })
+return tokenResponse
 };
 
-export {login};
+export default login;
